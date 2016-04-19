@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzU-5j-pKj">
+                                <rect key="frame" x="96" y="494" width="60" height="30"/>
+                                <state key="normal" title="建立连接"/>
+                                <connections>
+                                    <action selector="connection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1L2-VT-KqF"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUL-lE-xo1">
+                                <rect key="frame" x="67" y="100" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EOH-Ck-h8O" appends="YES" id="D2v-VM-1rT"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edt-UL-9AR">
+                                <rect key="frame" x="243" y="494" width="60" height="30"/>
+                                <state key="normal" title="发送数据"/>
+                                <connections>
+                                    <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="auf-pK-Csm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WUL-lE-xo1" secondAttribute="trailing" constant="68" id="7to-Yc-L9n"/>
+                            <constraint firstItem="Edt-UL-9AR" firstAttribute="top" secondItem="WUL-lE-xo1" secondAttribute="bottom" constant="266" id="LUx-hy-VnX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Edt-UL-9AR" secondAttribute="bottom" constant="143" id="Wyq-NL-Ou7"/>
+                            <constraint firstItem="WUL-lE-xo1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="eUd-6a-V3I"/>
+                            <constraint firstItem="yzU-5j-pKj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="kiS-oB-C9Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Edt-UL-9AR" secondAttribute="trailing" constant="56" id="tAA-Yj-BJq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yzU-5j-pKj" secondAttribute="bottom" constant="143" id="vLq-c1-C2x"/>
+                            <constraint firstItem="WUL-lE-xo1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="vWY-EC-rsP"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="iamgeView" destination="WUL-lE-xo1" id="VqC-Gf-d6T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EOH-Ck-h8O">
+                    <connections>
+                        <action selector="tap:" destination="BYZ-38-t0r" id="Des-bk-s88"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
